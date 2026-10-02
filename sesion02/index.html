@@ -22,11 +22,11 @@
          <h6>ETIQUETA H6 </h6>
         
         <p>Esto es un parrafo</p>
-      <a href="nosotros.html"> Nosotros </a>
+      <a href="nosotros.html" target="_parent"> Nosotros </a>
     <img alt="Logo ecotec" width="50%"  src="img/ecotec.png" > 
         
         <!--Listas Ordenadas-->
-        <ol type="i">
+        <ol type="A">
             <li>Crear un archivo</li>
             <li>Escribir codigo</li>
             <li>HAcer debug</li>
@@ -46,7 +46,7 @@
         <table  >
             <caption> Lista Clientes</caption>
             <tr>
-                <th>Nombres </th>
+                <th scope="col">Nombres </th>
                 <th>Correo</th>
                 <th>Direccion</th>
             </tr>
@@ -75,6 +75,36 @@
             
         </table>
         
+        <!--Cita extensa-->
+        <blockquote>
+        <p>Texto Citado en una obra</p>
+        </blockquote>
+        
+     <!--Cita corta en un párrafo-->
+        <p>
+        El profesor dijo <q>HTML estructura  de contenido</q>
+        </p>
+     <!--identifica el titulo de la obra citada-->
+        <p> 
+        Puedes consultar <cite> Guia HTML</cite>
+        </p>
+        
+         <!--Formularios-->
+        <form>
+            <label for="nombres">Nombres:</label>
+            <input type="text" name="nombres"  id="nombres"> <br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos"  id="apellidos"><br>
+            <label for="apellidos">Correo:</label>
+            <input type="email"><br>
+            <label for="telefono">Telefono:</label>
+            <input type="tel"><br>
+
+        
+        
+        </form>
+         <!--fin Formularios-->
+        
         
          
         
@@ -85,7 +115,7 @@
          <!--CREAR ETIQUETAS NO ES UNA BUENA PRACTICA
         <gc> Esta es una etiqueta creada</gc>-->
         
-        <div id="mainDiv">Hello Div</div>
+       
         <br />
         <button onclick="buttonClicked()">Click me</button>
     </body>
