@@ -86,6 +86,10 @@ img{
 nav{
     background-color: #222;
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 nav ul{
     
@@ -103,12 +107,55 @@ nav a{
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 10px;
+    
+    transition: 1s;
 }
-
 nav a:hover
 {
  background-color: orange;
     color: black;
+    transform: translateY(-20px);
+}
+
+/* Logo*/
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+/* Para que el menu sea adaptativo, responsive*/
+@media(max-width:700px){
+    
+    nav{
+        background-color: red;
+    }
+    
+    nav ul{
+        display: none;
+    }
+    
+  .menu-hamburguesa{
+    display: none;
+}  
+    
+}
+
+
+@media(max-width:1000px){
+    
+    nav{
+        background-color: yellow;
+    }
+    
+    nav ul{
+        display: none;
+    }
+    
+  .menu-hamburguesa{
+    display: none;
+}  
+    
 }
 
 
