@@ -1,0 +1,140 @@
+/*Selectores de etiquetas*/
+
+
+body{
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h1{
+    color: darkorange;
+    font-size: 40px;
+    text-align: center;
+    
+}
+p{
+    color:grey;
+    font-size: 20px;
+}
+/*
+button{
+    background-color: green;
+    color: white;
+}
+*/
+
+.boton1{
+    background-color: darkorange;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    /*margin: 50px;*/
+    margin-right: 20px;
+    margin-left: 20px;
+    border:none;
+    border-radius: 17px;
+    cursor: pointer;
+
+}
+.boton1:hover{
+    background-color: darkcyan;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px gray;
+    /*transform: scale(1.1); Va aumentar el 110% de su tamaño original*/
+}
+
+.boton2{
+    background-color:dodgerblue;
+    color: white;
+}
+.boton3{
+    background-color:darksalmon;
+    color: white;
+}
+
+/*Mmodificar la imagen*/
+
+img{
+    width: 200px;
+    border-radius: 20%;
+    object-fit:cover;
+    
+  
+    transform: scale(1.2);
+    
+}
+
+/* El ancho incluye contenido, relleno y borde. El margen queda fuera. */
+.tarjeta {
+
+    box-sizing: border-box;
+
+    width: 300px;
+
+    padding: 20px;
+
+    margin: 30px;
+
+    border: 2px solid black;
+
+    border-radius: 10px;
+
+}
+
+/* Estilo para el menu */
+nav{
+    background-color: #222;
+    padding: 15px;
+}
+nav ul{
+    
+    list-style: none;/* Elimina las viñetas */
+    display: flex; /* Coloca los elementos en fila */
+    gap: 20px; /* Crea espacio entre cada opción */
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+nav a:hover
+{
+ background-color: orange;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la imagen que está dentro de la tarjeta. */
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    transform: none;
+    border-radius: 8px;
+}
