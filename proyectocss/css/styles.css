@@ -1,187 +1,183 @@
-/*Selectores de etiquetas*/
+/* ==========================================
+   1. ESTILOS GENERALES
+========================================== */
 
-
-body{
-    background-color: lightgray;
+body {
+    background-color: #f1f5f9;
+    color: #243746;
     font-family: Arial, Helvetica, sans-serif;
-    
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    color: darkorange;
+h1 {
+    color: #1e4f73;
     font-size: 40px;
     text-align: center;
-    
 }
-p{
-    color:grey;
+
+p {
+    color: #526475;
     font-size: 20px;
 }
-/*
-button{
-    background-color: green;
-    color: white;
-}
-*/
 
-.boton1{
-    background-color: darkorange;
+
+/* ==========================================
+   2. ESTILOS DE BOTONES
+========================================== */
+
+.boton1 {
+    background-color: #1e4f73;
     color: white;
     font-size: 18px;
     padding: 10px;
-    /*margin: 50px;*/
     margin-right: 20px;
     margin-left: 20px;
-    border:none;
+    border: none;
     border-radius: 17px;
     cursor: pointer;
-
 }
-.boton1:hover{
-    background-color: darkcyan;
+
+.boton1:hover {
+    background-color: #1e4f73;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px gray;
-    /*transform: scale(1.1); Va aumentar el 110% de su tamaño original*/
+    box-shadow: 0 4px 10px #b8c9d6;
 }
 
-.boton2{
-    background-color:dodgerblue;
-    color: white;
-}
-.boton3{
-    background-color:darksalmon;
+.boton2 {
+    background-color: #337d78;
     color: white;
 }
 
-/*Mmodificar la imagen*/
+.boton3 {
+    background-color: #78638d;
+    color: white;
+}
 
-img{
+
+/* ==========================================
+   3. IMÁGENES
+========================================== */
+
+img {
     width: 200px;
     border-radius: 20%;
-    object-fit:cover;
-    
-  
+    object-fit: cover;
     transform: scale(1.2);
-    
 }
 
-/* El ancho incluye contenido, relleno y borde. El margen queda fuera. */
+
+/* ==========================================
+   4. TARJETAS
+========================================== */
+
 .tarjeta {
-
     box-sizing: border-box;
-
     width: 300px;
-
     padding: 20px;
-
     margin: 30px;
-
-    border: 2px solid black;
-
+    background-color: #ffffff;
+    border: 2px solid #b8cddd;
     border-radius: 10px;
-
 }
 
-/* Estilo para el menu */
-nav{
-    background-color: #222;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-nav ul{
-    
-    list-style: none;/* Elimina las viñetas */
-    display: flex; /* Coloca los elementos en fila */
-    gap: 20px; /* Crea espacio entre cada opción */
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-}
+/* Imagen dentro de la tarjeta */
 
-nav a{
-    color:white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    
-    transition: 1s;
-}
-nav a:hover
-{
- background-color: orange;
-    color: black;
-    transform: translateY(-20px);
-}
-
-/* Logo*/
-.logo{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    
-}
-/* Para que el menu sea adaptativo, responsive*/
-@media(max-width:700px){
-    
-    nav{
-        background-color: red;
-    }
-    
-    nav ul{
-        display: none;
-    }
-    
-  .menu-hamburguesa{
-    display: none;
-}  
-    
-}
-
-
-@media(max-width:1000px){
-    
-    nav{
-        background-color: yellow;
-    }
-    
-    nav ul{
-        display: none;
-    }
-    
-  .menu-hamburguesa{
-    display: none;
-}  
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos para la imagen que está dentro de la tarjeta. */
 .tarjeta img {
     width: 100%;
     height: auto;
     transform: none;
     border-radius: 8px;
 }
+
+/* Botón dentro de la tarjeta */
+
+.tarjeta button {
+    background-color: #246a9a;
+    color: white;
+    border-color: #1e4f73;
+}
+
+
+/* ==========================================
+   5. MENÚ DE NAVEGACIÓN
+========================================== */
+
+nav {
+    background-color: #183b56;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Lista del menú */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Enlaces del menú */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    transition: 1s;
+}
+
+/* Efecto al pasar el mouse */
+
+nav a:hover {
+    background-color: #dceaf5;
+    color: #183b56;
+}
+
+
+/* ==========================================
+   6. LOGOTIPO
+========================================== */
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   7. TÍTULO PRINCIPAL
+========================================== */
+
+.title {
+    color: #1e4f73;
+    background-color: #e2edf5;
+
+    padding: 24px 16px;
+    margin: 28px 0;
+
+    border-bottom: 4px solid #337d78;
+    border-radius: 8px;
+
+    font-size: 36px;
+}
+
+
+
+
+
