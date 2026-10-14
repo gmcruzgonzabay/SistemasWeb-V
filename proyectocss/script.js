@@ -1,6 +1,7 @@
-let numButtonClicks = 0;
-function buttonClicked() {
-    numButtonClicks = numButtonClicks + 1;
-    document.getElementById("mainDiv").textContent =
-        "Button Clicked times: " + numButtonClicks;
+//Funcion en JS, en JS es sensible a mayusculas y minusculas, DOM
+function abrirMenu()
+{
+    const menu= document.querySelector("nav ul");
+    menu.classList.toggle("activo");
+    
 }
