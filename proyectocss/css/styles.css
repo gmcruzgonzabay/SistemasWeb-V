@@ -1,12 +1,42 @@
 
 /* ==========================================
+    MEDIDAS, UNIDADES
+
+REM(Root EM)
+0.5rem.    8px
+0.7rem     12 px
+1rem       16px;
+
+
+
+
+========================================== */
+
+
+
+
+
+/* ==========================================
     VARIABLES 
 ========================================== */
 :root{
-        --color-primario: #1e4f73;
-        --color-secundario: #337d78;
-        --color-text: #243746;
-        --color-fondo: #f1f5f9;
+        --colorprimario: #1e4f73;
+        --colorsecundario: #337d78;
+        --colortext: #243746;
+        --colorfondo: #f1f5f9;
+    
+        --tamaniotexto: 36px;
+    
+         /*espaciado*/
+    
+        --margen:20px;
+        
+         /*espaciado*/
+        --bordes: 15px;
+    
+         /*Tipografía*/
+        --fuente: Arial, sans-srif;
+    
     
 }
 
@@ -17,20 +47,22 @@
 body {
     background-color: var(--color-fondo);
     color: #243746;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: "Bitcount Prop-Single",sans-serif;
+    
     margin: 0;
     padding: 0;
 }
 
 h1 {
     color: var(--color-text);
-    font-size: 40px;
+    font-size: 8.5rem;
     text-align: center;
 }
 
 p {
     color: #526475;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 
