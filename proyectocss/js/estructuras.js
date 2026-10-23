@@ -54,5 +54,25 @@ for(let i=1;i<=10;i++)
         
         console.log(i);
     }
+// While
 
+console.log("While");
+let contador=1;
+
+while(contador <= 5)
+    {
+        console.log(contador);
+        contador ++;
+        
+    }
+
+//Do while
+
+do
+{
+    console.log(contador);
+    contador++;
+  
+}
+while(contador <=5);
 
