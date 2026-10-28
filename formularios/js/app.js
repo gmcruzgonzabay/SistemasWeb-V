@@ -11,10 +11,11 @@ const confirmar=document.getElementById("confirmar");
 const usuario= document.getElementById("usuario");
 const terminos=document.getElementById("terminos");
 const boton=document.getElementById("validar");
+const resultado= document.getElementById("resultado");
 
 boton.addEventListener("click",function(evento){
 
-    //evento.preventDefault();
+    evento.preventDefault();
     let errores=[];
 
     //validadr nombre
@@ -59,7 +60,20 @@ boton.addEventListener("click",function(evento){
     //Validar el usuario
     if(usuario.value.trim().length <5){
         errores.push("El usuario debe tener al menos 5 caracteres")
-       // console.log("El usuario debe tener al menos 5 caracteres")
+       // con
+       // sole.log("El usuario debe tener al menos 5 caracteres")
+    }
+
+
+    //validar correo
+    if(correo.value.trim==="")
+    {
+        errores.push("El correo electronico es obligatorio");
+    }
+
+    if(!correo.value.includes("@"))
+    {
+        errores.push("El correo debe tener @");
     }
 
     //validar los termino
@@ -70,13 +84,27 @@ boton.addEventListener("click",function(evento){
     }
 
 
+
+
     //mostrar los resultados
     if(errores.length > 0)
     {
         console.log("Errores encontrados");
         errores.forEach(function (error){
+
+            const mensaje= document.createElement("p");
+            mensaje.textContent=error;
+
+            resultado.appendChild(mensaje);
+
+
             console.log("-" +error);
         });
+    }
+
+    else
+    {
+        resultado.textContent="Formulario valido. Tidis los datos son correctos";
     }
 
 
