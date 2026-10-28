@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FormaLab · Validaciones de formularios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <main class="container py-5">
+
+    <div class="row g-4 align-items-start justify-content-center">
+      <div class="col-lg-9 col-xl-8">
+        <section class="form-card">
+          <div class="card-heading d-flex gap-3 align-items-start">
+            <span class="section-icon">↗</span>
+            <div><h2>Crea tu perfil</h2><p>Completa tus datos para poner las reglas a prueba.</p></div>
+            <span class="demo-badge ms-auto">DEMO</span>
+          </div>
+          <form id="formulario" novalidate>
+            <div id="resultado" tabindex="-1" class="alert" role="status" aria-live="polite" hidden></div>
+            <div class="form-section-title"><span>01</span> INFORMACIÓN PERSONAL</div>
+            <div class="row g-4">
+              <div class="col-md-6"><label for="nombre" class="form-label">Nombre completo <span>*</span></label><input id="nombre" name="nombre" class="form-control" placeholder="Ej. Ana Torres" autocomplete="name" required minlength="3" maxlength="80" aria-describedby="ayuda-nombre error-nombre"><div id="ayuda-nombre" class="form-text">Al menos 3 caracteres.</div><div id="error-nombre" class="invalid-feedback"></div></div>
+              <div class="col-md-6"><label for="correo" class="form-label">Correo electrónico <span>*</span></label><input id="correo" name="correo" type="email" class="form-control" placeholder="ana@ejemplo.com" autocomplete="email" required aria-describedby="ayuda-correo error-correo"><div id="ayuda-correo" class="form-text">Un correo con formato válido.</div><div id="error-correo" class="invalid-feedback"></div></div>
+              <div class="col-md-6"><label for="edad" class="form-label">Edad <span>*</span></label><input id="edad" name="edad" type="number" class="form-control" placeholder="Ej. 22" min="18" max="100" step="1" required aria-describedby="ayuda-edad error-edad"><div id="ayuda-edad" class="form-text">Entre 18 y 100 años.</div><div id="error-edad" class="invalid-feedback"></div></div>
+              <div class="col-md-6"><label for="pais" class="form-label">País <span>*</span></label><select id="pais" name="pais" class="form-select" required aria-describedby="ayuda-pais error-pais"><option value="">Selecciona tu país</option><option>Ecuador</option><option>Colombia</option><option>Perú</option><option>México</option><option>Argentina</option><option>Chile</option><option>España</option><option>Otro</option></select><div id="ayuda-pais" class="form-text">Selecciona una de las opciones.</div><div id="error-pais" class="invalid-feedback"></div></div>
+            </div>
+            <div class="form-section-title mt-4"><span>02</span> SEGURIDAD DE TU CUENTA</div>
+            <div class="row g-4">
+              <div class="col-md-6"><label for="clave" class="form-label">Contraseña <span>*</span></label><input id="clave" name="clave" type="password" class="form-control" placeholder="Crea una contraseña" autocomplete="new-password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" aria-describedby="ayuda-clave error-clave"><div id="ayuda-clave" class="form-text">8 caracteres, mayúscula, minúscula y número.</div><div id="error-clave" class="invalid-feedback"></div></div>
+              <div class="col-md-6"><label for="confirmar" class="form-label">Confirmar contraseña <span>*</span></label><input id="confirmar" name="confirmar" type="password" class="form-control" placeholder="Repite tu contraseña" autocomplete="new-password" required aria-describedby="ayuda-confirmar error-confirmar"><div id="ayuda-confirmar" class="form-text">Debe coincidir con la contraseña.</div><div id="error-confirmar" class="invalid-feedback"></div></div>
+              <div class="col-12"><label for="usuario" class="form-label">Nombre de usuario <span>*</span></label><input id="usuario" name="usuario" class="form-control" placeholder="Ej. ana_torres" autocomplete="username" required pattern="[A-Za-z0-9_]{4,20}" minlength="4" maxlength="20" aria-describedby="ayuda-usuario error-usuario"><div id="ayuda-usuario" class="form-text">De 4 a 20 caracteres: letras sin tildes, números o guion bajo.</div><div id="error-usuario" class="invalid-feedback"></div></div>
+            </div>
+            <div class="terms-box form-check"><input id="terminos" name="terminos" type="checkbox" class="form-check-input" required aria-describedby="error-terminos"><label for="terminos" class="form-check-label">Acepto los términos de esta demostración <span>*</span></label><div class="form-text">Formulario de práctica para aprender a validar con JavaScript.</div><div id="error-terminos" class="invalid-feedback"></div></div>
+            <div class="form-actions d-flex gap-3 flex-wrap align-items-center"><button id="validar" type="button" class="btn btn-primary">Validar formulario <span aria-hidden="true">→</span></button><button type="reset" class="btn btn-reset">Limpiar campos</button></div>
+            <p class="required-note mb-0">Los campos marcados con <span>*</span> son obligatorios.</p>
+          </form>
+        </section>
+      </div>
+
+    </div>
+    <footer class="d-flex justify-content-between flex-wrap gap-2"><span>FormaLab · Pequeños detalles, mejores formularios.</span><span>HTML5 + CSS + Bootstrap</span></footer>
+  </main>
+<script src="js/app.js"></script>
+</body>
+</html>
