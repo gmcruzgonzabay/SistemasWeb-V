@@ -16,6 +16,7 @@ const resultado= document.getElementById("resultado");
 boton.addEventListener("click",function(evento){
 
     evento.preventDefault();
+    resultado.innerHTML="";
     let errores=[];
 
     //validadr nombre
@@ -66,7 +67,7 @@ boton.addEventListener("click",function(evento){
 
 
     //validar correo
-    if(correo.value.trim==="")
+    if(correo.value.trim()==="")
     {
         errores.push("El correo electronico es obligatorio");
     }
@@ -89,22 +90,23 @@ boton.addEventListener("click",function(evento){
     //mostrar los resultados
     if(errores.length > 0)
     {
+
+        resultado.hidden=false;
         console.log("Errores encontrados");
         errores.forEach(function (error){
 
             const mensaje= document.createElement("p");
             mensaje.textContent=error;
-
             resultado.appendChild(mensaje);
-
-
             console.log("-" +error);
         });
     }
 
     else
     {
-        resultado.textContent="Formulario valido. Tidis los datos son correctos";
+        //errores.hidden=false;
+        resultado.className="alert alert-success";
+        resultado.textContent="Formulario valido. Todos los datos son correctos";
     }
 
 
