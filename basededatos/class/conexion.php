@@ -1,5 +1,4 @@
 //Archivo para llamar a la conexion de la base de datos
-
 <?php
 //funciones en php, puede ser publica o privada(PUBLIC O PRIVATE)
 
@@ -12,7 +11,7 @@ class conexion
 
 
         $config =require __DIR__ . '/../config/database.php';
-        $dsn=" mysql:host={$config['host']};"
+        $dsn="mysql:host={$config['host']};"
              ."port={$config['port']};"
              ."dbname={$config['dbname']}; "
              ."charset={$config['charset']}" ;

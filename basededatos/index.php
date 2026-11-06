@@ -1,7 +1,23 @@
+<?php
+require_once __DIR__ . '/class/conexion.php';
+require_once __DIR__ . '/models/estudiante.php';
+
+try {
+    $conexion = new conexion();
+    $db = $conexion->conectar();
+    $modelo = new estudiante($db);
+   $estudiantes = $modelo->listar();
+
+   
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+    exit('No se pudo conectar. Revise configuracion y registro');
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/estudiantes.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="site-header py-3">
         <div class="container content d-flex align-items-center gap-3">
@@ -55,15 +72,17 @@
                             </tr>
                         </thead>
                         <tbody id="student-rows">
-                        <?php foreach ($estudiantes as $estudiante): ?>
-                            <tr data-student>
-                                <td class="student-id"><?= htmlspecialchars((string) $estudiante['id'], ENT_QUOTES, 'UTF-8') ?></td>
-                                <td class="student-name"><div class="d-flex align-items-center gap-3"><span class="student-mark" aria-hidden="true"><?= htmlspecialchars(mb_substr(trim($estudiante['nombre']), 0, 1, 'UTF-8'), ENT_QUOTES, 'UTF-8') ?></span><span class="fw-medium"><?= htmlspecialchars($estudiante['nombre'], ENT_QUOTES, 'UTF-8') ?></span></div></td>
-                                <td>
-                                    <a class="email" href="mailto:<?= htmlspecialchars($estudiante['correo'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($estudiante['correo'], ENT_QUOTES, 'UTF-8') ?></a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                            <?php foreach ($estudiantes as $estudiante): ?>
+                                <tr data-student>
+                                    <td class="student-id"><?= htmlspecialchars((string) $estudiante['id'], ENT_QUOTES, 'UTF-8') ?></td>
+                                    <td class="student-name">
+                                        <div class="d-flex align-items-center gap-3"><span class="student-mark" aria-hidden="true"><?= htmlspecialchars(mb_substr(trim($estudiante['nombre']), 0, 1, 'UTF-8'), ENT_QUOTES, 'UTF-8') ?></span><span class="fw-medium"><?= htmlspecialchars($estudiante['nombre'], ENT_QUOTES, 'UTF-8') ?></span></div>
+                                    </td>
+                                    <td>
+                                        <a class="email" href="mailto:<?= htmlspecialchars($estudiante['correo'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($estudiante['correo'], ENT_QUOTES, 'UTF-8') ?></a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -74,4 +93,5 @@
     </main>
 
 </body>
+
 </html>
