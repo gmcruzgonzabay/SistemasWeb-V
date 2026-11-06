@@ -1,0 +1,33 @@
+:root { --navy: #173c54; --teal: #287b78; }
+body { background: #f3f5f6; color: #263b49; font-size: .94rem; }
+.site-header { background: var(--navy); border-bottom: 3px solid #63aaa2; color: #fff; }
+.brand { font-weight: 750; letter-spacing: .07em; font-size: 1.15rem; }
+.site-header .header-label { color: #cad8df; border-color: #496476 !important; }
+.content { max-width: 1080px; }
+.page-heading { padding-top: .75rem; }
+.eyebrow { font-size: .7rem; font-weight: 700; letter-spacing: .13em; color: var(--teal); }
+h1 { letter-spacing: -.04em; color: var(--navy); }
+.count { background: #e7efee; color: #286561; border: 1px solid #d7e5e2; padding: .45rem .8rem; border-radius: 6px; font-size: .8rem; }
+.registry { border: 1px solid #dce3e7; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 4px 18px #173c5405; }
+.registry-toolbar { padding: 1.25rem 1.5rem; border-bottom: 1px solid #e8edef; }
+.search { width: 100%; max-width: 340px; }
+.search .form-control { background: #fafbfc; border-color: #dce3e7; font-size: .85rem; padding: .65rem .85rem; }
+.search .form-control:focus { border-color: var(--teal); box-shadow: 0 0 0 3px #287b781a; }
+.table-responsive { overflow-y: hidden; }
+.table { --bs-table-hover-bg: #f3f8f7; --bs-table-hover-color: #263b49; }
+.table > thead > tr > th { background: #f8fafb; color: #6b7c88; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
+.table > :not(caption) > * > * { padding: 1.15rem 1.5rem; border-color: #edf1f3; }
+.table tbody tr:last-child td { border-bottom: 0; }
+.table td { color: #304653; }
+.email { color: #437080; text-decoration: none; }
+.email:hover { color: #173c54; text-decoration: underline; }
+.table td.student-id { color: #8b98a0; font-size: .8rem; font-variant-numeric: tabular-nums; width: 90px; }
+.student-mark { width: 34px; height: 34px; flex: 0 0 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #dce9e7; background: #eef5f3; color: #39766d; border-radius: 50%; font-size: .75rem; font-weight: 600; }
+.registry-footer { padding: .9rem 1.5rem; border-top: 1px solid #edf1f3; background: #fcfdfd; color: #7a8993; font-size: .75rem; }
+@media (max-width: 575.98px) {
+    .registry-toolbar { align-items: stretch !important; }
+    .search { max-width: none; }
+    .table > :not(caption) > * > * { padding: 1rem; }
+    .student-name { min-width: 190px; }
+    .header-label { font-size: .75rem; }
+}
