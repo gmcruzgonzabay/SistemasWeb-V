@@ -91,7 +91,7 @@ try {
             <?php endif; ?>
         </section>
     </main>
-
+<script src="js/estudiantes.js" ></script>
 </body>
 
 </html>

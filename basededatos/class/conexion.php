@@ -1,5 +1,6 @@
-//Archivo para llamar a la conexion de la base de datos
+
 <?php
+//Archivo para llamar a la conexion de la base de datos
 //funciones en php, puede ser publica o privada(PUBLIC O PRIVATE)
 
 class conexion
